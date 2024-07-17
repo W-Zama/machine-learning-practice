@@ -8,7 +8,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 
 def main():
-    df = pd.read_csv('../data/Student_Performance.csv')
+    df = pd.read_csv('../../data/Student_Performance.csv')
 
     # 前処理
     encoder = OneHotEncoder(sparse_output=False)
@@ -47,7 +47,7 @@ def main():
     plt.title('Actual vs Predicted Performance Index')
     plt.legend()
     plt.savefig(
-        '../multiple_linear_regression/figure/student_performance_prediction.png')
+        'figure/student_performance_prediction.png')
 
 
 if __name__ == '__main__':

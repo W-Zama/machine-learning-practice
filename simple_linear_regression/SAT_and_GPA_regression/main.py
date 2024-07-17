@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 
 def main():
-    data = pd.read_csv('../data/SAT_and_GPA.csv')
+    data = pd.read_csv('../../data/SAT_and_GPA.csv')
 
     df = pd.DataFrame(data)
 
