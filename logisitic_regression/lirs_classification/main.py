@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report, f1_score
+from sklearn.metrics import classification_report
 
 
 def main():
@@ -28,13 +28,8 @@ def main():
     y_pred = model.predict(X_test)
     y_pred_proba = model.predict_proba(X_test)
 
-    accuracy = accuracy_score(y_test, y_pred)
-    print(y_test)
-    f1 = f1_score(y_test, y_pred, average='macro')
     report = classification_report(y_test, y_pred)
 
-    print(f'Accuracy: {accuracy}')
-    print(f'f1: {f1}')
     print(report)
 
 
